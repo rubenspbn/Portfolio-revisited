@@ -1,0 +1,271 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  min-height: 8vh;
+  background-color: #202225;
+  color: #f2eff3;
+}
+
+main {
+  background-color: #36393f;
+  color: #cccccc;
+  min-height: 86vh;
+  padding-top: 2vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer {
+  min-height: 6vh;
+  background-color: #202225;
+  color: #f2eff3;
+}
+
+@media screen and (min-width: 320px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-links {
+    position: absolute;
+    right: 0;
+    height: 92vh;
+    top: 8vh;
+    background-color: #2f3136;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 30%;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: -webkit-transform 0.5s ease-in;
+    transition: -webkit-transform 0.5s ease-in;
+    transition: transform 0.5s ease-in;
+    transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+    text-decoration: none;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .nav-links li {
+    opacity: 0;
+    list-style-type: none;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+  }
+  .nav-links a {
+    color: #f2eff3;
+    letter-spacing: 0.1rem;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav-links a:hover {
+    background-color: #393c43;
+  }
+  .sandwich {
+    font-size: 1.25rem;
+    font-weight: bold;
+    display: block;
+    background-color: #202225;
+    color: #f2eff3;
+    border-radius: 25%;
+    padding: 0.75rem;
+    border: 0.1rem solid #f2eff3;
+  }
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    margin: 0 1rem;
+  }
+  .nav-active {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  @-webkit-keyframes navLinkFade {
+    from {
+      opacity: 0;
+      -webkit-transform: translateX(10vw);
+              transform: translateX(10vw);
+    }
+    to {
+      opacity: 1;
+      -webkit-transform: translateX(0vw);
+              transform: translateX(0vw);
+    }
+  }
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      -webkit-transform: translateX(10vw);
+              transform: translateX(10vw);
+    }
+    to {
+      opacity: 1;
+      -webkit-transform: translateX(0vw);
+              transform: translateX(0vw);
+    }
+  }
+  .logo {
+    font-size: 1.5rem;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-weight: bolder;
+    letter-spacing: 0.1rem;
+  }
+  .logo:hover span {
+    opacity: 1;
+  }
+  .logo span {
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    width: 0;
+    opacity: 0;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    overflow: hidden;
+  }
+  .linkedin {
+    display: none;
+  }
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0 2vw;
+  }
+  .grid {
+    width: 80%;
+    margin-top: 5vh;
+    display: -ms-grid;
+    display: grid;
+    gap: 1rem;
+    -ms-grid-columns: (minmax(240px, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .grid {
+    width: 60%;
+  }
+  .linkedin {
+    font-weight: bolder;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0.9rem;
+    margin: 0.1rem;
+    font-size: 1rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-decoration: none;
+    border-radius: 50%;
+    background: #007bb5;
+    color: white;
+  }
+  .linkedin:hover {
+    opacity: 0.7;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .nav-links {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    top: 0vh;
+    height: 8vh;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    background-color: #202225;
+    -webkit-transition: none;
+    transition: none;
+    width: 50vw;
+  }
+  .nav-links li {
+    opacity: 1;
+    height: 100%;
+  }
+  .nav-links a {
+    text-decoration: none;
+  }
+  .sandwich {
+    display: none;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

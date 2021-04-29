@@ -1,0 +1,218 @@
+$phone: 320px;
+$tablet: 768px;
+$laptop: 1024px;
+$largescreens: 1440px;
+
+$box-bcolor: rgb(32, 34, 37);
+$main-bcolor: rgb(54, 57, 63);
+$side-bcolor: rgb(47, 49, 54);
+$hover-bcolor: rgb(57, 60, 67);
+$box-color: rgb(242, 239, 243);
+$main-color: rgb(204, 204, 204);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    min-height: 8vh;
+    background-color: $box-bcolor;
+    color: $box-color;
+}
+
+main {
+    background-color: $main-bcolor;
+    color: $main-color;
+    min-height: 86vh;
+    padding-top: 2vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer {
+    min-height: 6vh;
+    background-color: $box-bcolor;
+    color: $box-color;
+}
+
+@media screen and (min-width: $phone) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav-links {
+        position: absolute;
+        right: 0;
+        height: 92vh;
+        top: 8vh;
+        background-color: $side-bcolor;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 30%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        text-decoration: none;
+        justify-content: space-around;
+
+        li {
+            opacity: 0;
+            list-style-type: none;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+
+        a {
+            color: $box-color;
+            letter-spacing: 0.1rem;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:hover {
+                background-color: $hover-bcolor;
+            }
+        }
+    }
+
+    .sandwich {
+        font-size: 1.25rem;
+        font-weight: bold;
+        display: block;
+        background-color: $box-bcolor;
+        color: $box-color;
+        border-radius: 25%;
+        padding: 0.75rem;
+        border: 0.1rem solid $box-color;
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-grow: 1;
+        margin: 0 1rem;
+    }
+
+    .nav-active {
+        transform: translateX(0%)
+    }
+
+    @keyframes navLinkFade {
+        from {
+            opacity: 0;
+            transform: translateX(10vw);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0vw);
+        }
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        overflow: hidden;
+        display: flex;
+        font-weight: bolder;
+        letter-spacing: 0.1rem;
+
+        &:hover {
+            span {
+                opacity: 1;
+            }
+        }
+
+        span {
+            transition: all 0.3s ease-out;
+            width: 0;
+            opacity: 0;
+            display: inline-flex;
+            overflow: hidden;
+        }
+    }
+
+    .linkedin {
+        display: none;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 2vw;
+    }
+
+    .grid {
+        width: 80%;
+        margin-top: 5vh;
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+}
+
+@media screen and (min-width: $tablet) {
+    .grid {
+        width: 60%;
+    }
+
+    .linkedin {
+        font-weight: bolder;
+        display: flex;
+        padding: 0.9rem;
+        margin: 0.1rem;
+        font-size: 1rem;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        border-radius: 50%;
+
+        &:hover {
+            opacity: 0.7;
+        }
+
+        background: #007bb5;
+        color: white;
+    }
+}
+
+@media screen and (min-width: $laptop) {
+    .nav-links {
+        flex-direction: row;
+        top: 0vh;
+        height: 8vh;
+        transform: translateX(0%);
+        background-color: $box-bcolor;
+        transition: none;
+        width: 50vw;
+
+        li {
+            opacity: 1;
+            height: 100%;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    }
+
+    .sandwich {
+        display: none;
+    }
+}
