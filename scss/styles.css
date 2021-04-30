@@ -7,6 +7,7 @@
 }
 
 header {
+  padding: 0rem 3rem;
   min-height: 8vh;
   background-color: #202225;
   color: #f2eff3;
@@ -36,6 +37,126 @@ footer {
 }
 
 @media screen and (min-width: 320px) {
+  address {
+    background-color: #202225;
+    width: 100%;
+    border: none;
+    border: solid 1rem #202225;
+    border-radius: 10px;
+  }
+  address a {
+    color: #f2eff3;
+    letter-spacing: 0.1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  address a:hover {
+    background-color: #393c43;
+  }
+  form {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(5rem, 1fr))[1];
+        grid-template-columns: repeat(1, minmax(5rem, 1fr));
+    width: 80%;
+    background-color: #202225;
+    border: none;
+    border: solid 1rem #202225;
+    border-radius: 10px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  label {
+    display: none;
+  }
+  input {
+    background-color: whitesmoke;
+    color: #202225;
+    border: 1rem;
+    padding: 1rem;
+    margin: 1rem;
+    border: none;
+    border: solid 1px #ccc;
+    border-radius: 10px;
+  }
+  input#name {
+    width: 50%;
+  }
+  textarea {
+    background-color: whitesmoke;
+    color: #202225;
+    border: 1rem;
+    padding: 1rem;
+    margin: 1rem;
+    border: none;
+    border: solid 1px #ccc;
+    border-radius: 10px;
+    resize: none;
+  }
+  .home-route img:hover {
+    opacity: 0.3;
+  }
+  .description {
+    color: #9ddefc;
+    font-weight: bold;
+    text-shadow: -0.1rem 0.2rem black;
+    text-align: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .description h3 {
+    font-size: 2rem;
+  }
+  .description p {
+    font-size: 1.5rem;
+  }
+  .description ul {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  .item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+            box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+    -webkit-transition: all 500ms;
+    transition: all 500ms;
+    overflow: hidden;
+    font-size: 1.5rem;
+    text-shadow: -0.1rem 0.1rem black;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .item img {
+    -o-object-fit: fill;
+       object-fit: fill;
+    width: 100%;
+    height: 100%;
+  }
   body {
     overflow-x: hidden;
   }
@@ -209,12 +330,18 @@ footer {
     display: -ms-grid;
     display: grid;
     gap: 1rem;
-    -ms-grid-columns: (minmax(240px, 1fr))[auto-fill];
-        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    -ms-grid-columns: (minmax(5rem, 1fr))[1];
+        grid-template-columns: repeat(1, minmax(5rem, 1fr));
   }
 }
 
 @media screen and (min-width: 768px) {
+  form {
+    width: 60%;
+  }
+  .grid-center {
+    text-align: center;
+  }
   .grid {
     width: 60%;
   }
@@ -243,6 +370,9 @@ footer {
 }
 
 @media screen and (min-width: 1024px) {
+  form {
+    width: 60%;
+  }
   .nav-links {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -266,6 +396,19 @@ footer {
   }
   .sandwich {
     display: none;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .grid {
+    -ms-grid-columns: (minmax(5rem, 1fr))[2];
+        grid-template-columns: repeat(2, minmax(5rem, 1fr));
+  }
+  .item-wide {
+    grid-column: span 2 / auto;
+  }
+  .item-tall {
+    grid-row: span 2 / auto;
   }
 }
 /*# sourceMappingURL=styles.css.map */

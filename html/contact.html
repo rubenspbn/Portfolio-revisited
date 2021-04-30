@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta name="description" content="Introduction to myself">
     <meta name="author" content="Ruben Spillebeen">
@@ -10,6 +11,7 @@
     <script src="/js/globalscript.js" defer></script>
     <title>Portfolio Ruben Spillebeen</title>
 </head>
+
 <body>
     <header>
         <nav>
@@ -17,7 +19,7 @@
                 <h4>&lt;R<span>uben</span>S<span>pillebeen</span>/&gt;</h4>
             </div>
             <ul class="nav-links">
-                <li><a title="Home" href="/index.html" class="navbar-home" >Home</a></li>
+                <li><a title="Home" href="/index.html" class="navbar-home">Home</a></li>
                 <li><a title="about" href="/html/about.html">about</a></li>
                 <li><a title="contact" href="/html/contact.html">contact</a></li>
                 <li><a title="projects" href="/html/projects.html">projects</a></li>
@@ -25,12 +27,31 @@
             <button class="sandwich">&#9776;</button>
         </nav>
     </header>
-    <main></main>
+    <main>
+        <div class="grid">
+            <address class="item-wide">
+                <h3>mail me directly</h3>
+                <a href="mailto:rubenspillebeen@gmail.com">rubenspillebeen@gmail.com</a><br>
+                <h3>call me directly</h3>
+                <a href="tel:+32470248759">+32470248759</a>
+            </address>
+        </div>
+            <form action="contact-me" method="post">
+                <input type="text" name="name" id="name" placeholder="your name..." required>
+                <label for="subject">enter subject</label>
+                <input type="text" name="subject" id="subject" placeholder="subject..." required>
+                <label for="question">enter question</label>
+                <textarea name="question" id="question" cols="30" rows="10" placeholder="your question..." required></textarea>
+                <label for="name">enter name: </label>
+                <input type="submit" value="submit">
+            </form>
+    </main>
     <footer>
         <p class="copyright">
             &copy; Copyright 2021 Ruben Spillebeen
         </p>
-        <a href="https://www.linkedin.com/in/ruben-spillebeen-b27381206/" class= "linkedin">In</a>
+        <a href="https://www.linkedin.com/in/ruben-spillebeen-b27381206/" class="linkedin">In</a>
     </footer>
 </body>
+
 </html>

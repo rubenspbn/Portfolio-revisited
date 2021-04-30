@@ -18,6 +18,7 @@ $main-color: rgb(204, 204, 204);
 }
 
 header {
+    padding: 0rem 3rem;
     min-height: 8vh;
     background-color: $box-bcolor;
     color: $box-color;
@@ -40,6 +41,121 @@ footer {
 }
 
 @media screen and (min-width: $phone) {
+    address {
+        background-color: $box-bcolor;
+        width: 100%;
+        border: none;
+        border: solid 1rem $box-bcolor;
+        border-radius: 10px;
+
+        a {
+            color: $box-color;
+            letter-spacing: 0.1rem;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+
+            &:hover {
+                background-color: $hover-bcolor;
+            }
+        }
+    }
+
+    form {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(5rem, 1fr));
+        width: 80%;
+        background-color: $box-bcolor;
+        border: none;
+        border: solid 1rem $box-bcolor;
+        border-radius: 10px;
+        justify-content: center;
+    }
+
+    label {
+        display: none;
+    }
+
+    input {
+        background-color: whitesmoke;
+        color: $box-bcolor;
+        border: 1rem;
+        padding: 1rem;
+        margin: 1rem;
+        border: none;
+        border: solid 1px #ccc;
+        border-radius: 10px;
+
+        &#name {
+            width: 50%;
+        }
+    }
+
+    textarea {
+        background-color: whitesmoke;
+        color: $box-bcolor;
+        border: 1rem;
+        padding: 1rem;
+        margin: 1rem;
+        border: none;
+        border: solid 1px #ccc;
+        border-radius: 10px;
+        resize: none;
+    }
+
+    .home-route {
+        img {
+            &:hover {
+                opacity: 0.3;
+            }
+        }
+    }
+
+    .description {
+        color: rgb(157, 222, 252);
+        font-weight: bold;
+        text-shadow: -0.1rem 0.2rem black;
+        text-align: left;
+        display: flex;
+
+        h3 {
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+        }
+
+        ul {
+            align-self: flex-start;
+        }
+    }
+
+    .item {
+        img {
+            object-fit: fill;
+            width: 100%;
+            height: 100%;
+        }
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem,
+        rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+        height: 100%;
+        width: 100%;
+        border-radius: 4px;
+        transition: all 500ms;
+        overflow: hidden;
+        font-size: 1.5rem;
+        text-shadow: -0.1rem 0.1rem black;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
     body {
         overflow-x: hidden;
     }
@@ -163,11 +279,19 @@ footer {
         margin-top: 5vh;
         display: grid;
         gap: 1rem;
-        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        grid-template-columns: repeat(1, minmax(5rem, 1fr));
     }
 }
 
 @media screen and (min-width: $tablet) {
+    form {
+        width: 60%;
+    }
+
+    .grid-center {
+        text-align: center;
+    }
+
     .grid {
         width: 60%;
     }
@@ -190,9 +314,15 @@ footer {
         background: #007bb5;
         color: white;
     }
+
+
 }
 
 @media screen and (min-width: $laptop) {
+    form {
+        width: 60%;
+    }
+
     .nav-links {
         flex-direction: row;
         top: 0vh;
@@ -214,5 +344,19 @@ footer {
 
     .sandwich {
         display: none;
+    }
+}
+
+@media screen and (min-width: $largescreens) {
+    .grid {
+        grid-template-columns: repeat(2, minmax(5rem, 1fr));
+    }
+
+    .item-wide {
+        grid-column: span 2 / auto;
+    }
+
+    .item-tall {
+        grid-row: span 2 / auto;
     }
 }

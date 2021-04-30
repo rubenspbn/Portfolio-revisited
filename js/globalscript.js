@@ -38,12 +38,21 @@ const navSlide = () => {
             console.log(index);
         });
     });
+};
+const highlightAll = () => { 
+    document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('pre code').forEach((block) => {
+      hljs.highlightBlock(block);
+      console.log(1);
+    });
+  });
 }
 //bundle functions
 const app = () => {
     mouseEnterHandle();
     mouseOutHandle();
     navSlide();
+    highlightAll();
 }
 
 app();
